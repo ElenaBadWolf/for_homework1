@@ -6,10 +6,9 @@ from application import Application
 
 @pytest.fixture
 def app(request):
-    fixture = Application
+    fixture = Application()
     request.addfinalizer(fixture.destroy)
     return fixture
-
 
 def test_add_new_contact(app):
     app.login(username="admin",password="secret")
@@ -20,7 +19,6 @@ def test_add_new_contact(app):
                                             byear="2005", ayear="2001", address2="gfdgfdg", phone2="jhjj",
                                             notes="gfdgdf",))
     app.return_to_home_page()
-
 
 def test_add_new_empty_contact(app):
     app.login(username="admin",password="secret")
