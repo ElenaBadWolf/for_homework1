@@ -1,13 +1,14 @@
 from selenium.webdriver.firefox.webdriver import WebDriver
-from fixture.sessioncontact import sessionHelper
+from fixture.sessioncontact import SessionHelper
 from fixture.contact import ContactHelper
+
 
 class Application:
 
     def __init__(self):
         self.wd = WebDriver()
         self.wd.implicitly_wait(60)
-        self.sessioncontact = sessionHelper(self)
+        self.sessioncontact = SessionHelper(self)
         self.contact = ContactHelper
 
     def open_home_page(self):
@@ -23,4 +24,3 @@ class Application:
 
     def destroy(self):
         self.wd.quit()
-
