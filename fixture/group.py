@@ -1,5 +1,3 @@
-
-
 class GroupHelper:
     def __init__(self, app):
         self.app = app
@@ -34,8 +32,7 @@ class GroupHelper:
         wd.find_element_by_name("delete").click()
 
 
-
-    def init_creation( self ):
+    def init_creation(self):
         # init group creation
         wd = self.app.wd
         wd.find_element_by_name("new").click()

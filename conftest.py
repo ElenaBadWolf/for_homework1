@@ -1,9 +1,9 @@
 import pytest
-from fixture.applicationforgroup import Applicationgroup
+from fixture.application import Application
 
 
-@pytest.fixture(scope="session")
+@pytest.fixture(scope= "session")
 def app(request):
-    fixture = Applicationgroup()
+    fixture = Application()
     request.addfinalizer(fixture.destroy)
     return fixture
