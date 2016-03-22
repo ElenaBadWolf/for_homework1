@@ -11,7 +11,7 @@ def app(request):
     return fixture
 
 def test_add_new_contact(app):
-    app.sessioncontact.login(username="admin",password="secret")
+    app.session.logincon(username="admin",password="secret")
     app.contact.create(Contact(firstname="fghjfgfgfg", middlename="gfgf", lastname="gfgf", nickname="gfg",
                                title="gfg", company="gfg", address="gfgf", home="gf", mobile="gfg",
                                work="gdfgfd",
@@ -21,7 +21,7 @@ def test_add_new_contact(app):
     app.return_to_home_page()
 
 def test_add_new_empty_contact(app):
-    app.sessioncontact.login(username="admin",password="secret")
+    app.session.logincon(username="admin",password="secret")
     app.contact.create(Contact(firstname="", middlename="", lastname="", nickname="", title="", company="",
                                address="", home="", mobile="", work="gdfgfd",
                                fax="", email2="", email3="kjhkjh", homepage="khjkjh", byear="2005",
