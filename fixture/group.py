@@ -36,3 +36,12 @@ class GroupHelper:
         # init group creation
         wd = self.app.wd
         wd.find_element_by_name("new").click()
+
+    def mod_group(self):
+        wd = self.app.wd
+        wd.find_element_by_name("selected[]").click()
+        wd.find_element_by_name("edit").click()
+        wd.find_element_by_name("group_name").send_keys("changes")
+        wd.find_element_by_name("update").click()
+
+
