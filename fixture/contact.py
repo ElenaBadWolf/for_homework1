@@ -80,7 +80,7 @@ class ContactHelper:
     def delete_first_contact(self):
         wd = self.app.wd
         wd.find_element_by_name("selected[]").click()
-        wd.find_element_by_css_selector("input[value='Delete']")
+        wd.find_element_by_css_selector("input[value='Delete']").click()
 
     def mod_contact(self):
         wd = self.app.wd
@@ -89,3 +89,8 @@ class ContactHelper:
         wd.find_element_by_name("firstname").clear()
         wd.find_element_by_name("firstname").send_keys("changes")
         wd.find_element_by_name("update").click()
+
+
+    def count(self):
+        wd = self.app.wd
+        return len (wd.find_elements_by_name("selected[]"))
