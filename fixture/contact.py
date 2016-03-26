@@ -84,6 +84,7 @@ class ContactHelper:
 
     def mod_contact(self):
         wd = self.app.wd
+        wd.find_element_by_name("selected[]").click()
         wd.find_element_by_xpath("//table[@id='maintable']/tbody/tr[4]/td[8]/a/img").click()
         wd.find_element_by_name("firstname").click()
         wd.find_element_by_name("firstname").clear()
