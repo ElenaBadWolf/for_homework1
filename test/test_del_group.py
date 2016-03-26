@@ -1,7 +1,7 @@
 from model.group import Group
 
 def test_delete_first_group(app):
-        app.session.login(username="admin",password="secret")
+        app.session.logincon(username="admin",password="secret")
         if app.group.count() == 0:
            app.open_home_page_group()
            app.group.init_creation()
