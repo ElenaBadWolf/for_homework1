@@ -10,7 +10,6 @@ def test_delete_first_group(app):
            app.group.returt_to_groups_page()
         old_groups = app.group.get_group_list()
         app.group.delete_first_group()
-        app.open_home_page()
         assert len(old_groups) - 1 == app.group.count()
         new_groups = app.group.get_group_list()
         old_groups[0:1] = []
