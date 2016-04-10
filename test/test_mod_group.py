@@ -8,5 +8,5 @@ def test_mod_group(app):
            app.group.init_creation()
            app.group.fill_form(Group(name="test"))
            app.group.submit_creation()
-           app.group.returt_to_groups_page()
+           app.group.return_to_groups_page()
         app.group.mod_group()
