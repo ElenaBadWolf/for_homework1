@@ -54,10 +54,3 @@ def merge_email_like_on_home_page(contact):
                                 [contact.email, contact.email2, contact.email3]))))
 
 
-#def test_add_new_empty_contact(app):
-    #app.session.logincon(username="admin",password="secret")
-    #app.contact.create(Contact(firstname="", middlename="", lastname="", nickname="", title="", company="",
-                              # address="", home="", mobile="", work="gdfgfd",
-                              # fax="", email2="", email3="kjhkjh", homepage="khjkjh", byear="2005",
-                              # ayear="2001", address2="gfdgfdg", phone2="jhjj", notes="gfdgdf", ))
-    #app.return_to_home_page()
